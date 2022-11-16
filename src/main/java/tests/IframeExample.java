@@ -3,6 +3,7 @@ package tests;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import pages.ContactPage;
@@ -32,6 +33,9 @@ public class IframeExample extends BaseTest{
 		eventsPage.click(eventsPage.festivalOfOldFilmsLink);
 		Thread.sleep(3000);
 		
+		Actions action = new Actions(driver);
+		action.scrollByAmount(0, 800).perform();
+		
 		SingleEventPage sePage = new SingleEventPage(driver);
 		sePage.clickMap();
 		Thread.sleep(3000);
@@ -43,6 +47,8 @@ public class IframeExample extends BaseTest{
 		System.out.println(browserTabs.size());
 		driver.switchTo().window(browserTabs.get(1));
 		driver.close(); // inchide tabul curent
+		driver.switchTo().window(browserTabs.get(0)); //schimba focusul pe tabul ramas
+		
 		Thread.sleep(5000);
 		System.out.println("Current 2: " + driver.getWindowHandle());
 	}
