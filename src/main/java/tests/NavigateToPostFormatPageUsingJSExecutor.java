@@ -48,10 +48,11 @@ public class NavigateToPostFormatPageUsingJSExecutor extends BaseTest{
 		jse.executeScript("arguments[0].click()", menu.getElement(blogPage.readMoreButton));
 		
 		//adaugam un comment
-		//jse.executeScript("document.getElementById('comment').value = 'first comment'");   de ce nu merge asa?
-		//jse.executeScript("document.getElementById('author')[0].value = 'cristi'");
-		//jse.executeScript("document.getElementById('email')[0].value = 'cristi@yahoo.com'");
-		//jse.executeScript("document.getElementByClassName('submit')[0].click()");
+		//jse.executeScript("document.getElementById('comment').value = 'comment din JS3'");  
+        //jse.executeScript("document.getElementById('author').value = 'cristi'");
+        //jse.executeScript("document.getElementById('email').value = 'cristi@yahoo.com'");
+        //jse.executeScript("document.getElementsByClassName('submit')[0].click()");
+		// sau
 		
 		GalleryFormatPage gallery = new GalleryFormatPage(driver);
 		

@@ -32,6 +32,10 @@ public class NavMenuPage extends SeleniumWrappers{
 	
 	public By product = By.xpath("//div[@id='sc_tab_1456822345_1_17']/descendant::a[contains(@href,'garden')]");
 	
+	public By facebookIcon = By.xpath("//div[@class='top_panel_top_socials']/descendant::a[contains(@href,'face')]");
+	public By twitterIcon = By.xpath("//div[@class='top_panel_top_socials']/descendant::a[contains(@href,'twitter')]");
+	public By instaIcon = By.xpath("//div[@class='top_panel_top_socials']/descendant::a[contains(@href,'insta')]");
+	
 	public void navigateTo(By locator) {
 		
 		driver.findElement(locator).click();
